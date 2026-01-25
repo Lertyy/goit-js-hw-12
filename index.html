@@ -2,17 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Image Search</title>
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DvfmeZXB.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/styles-DvPDDfy5.css">
   </head>
   <body>
-    <main>
-      <form class="form">
+    <header>
+      <form class="form" id="search-form">
         <input
           type="text"
           name="search-text"
@@ -21,11 +20,15 @@
         />
         <button type="submit">Search</button>
       </form>
+    </header>
 
-      <ul class="gallery"></ul>
+    <main>
+      <ul class="gallery" id="gallery"></ul>
 
-      <button class="load-more is-hidden">Load more</button>
-      <div class="loader is-hidden"></div>
+      <div class="load-more-wrapper">
+        <button class="load-more js-load-more is-hidden">Load more</button>
+        <span class="loader is-hidden" id="loader"></span>
+      </div>
     </main>
 
   </body>
